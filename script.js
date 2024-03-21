@@ -20,15 +20,16 @@ function handleClick(numToAdd) {
       out.style.display = "none";
     }, 3000);
     handleClick = null
-
-    function Click(num){
-    document.getElementById("Score").value = rsum;
+  }
+}
+    function oppClick(num){
     const Min = 1; 
     const Max = 6; 
     let Randomnum; 
     Randomnum = Math.floor(Math.random() * Max) + Min;
     rsum += Randomnum 
     Rscore = parseInt(rsum);
+    document.getElementById("Score").value = rsum;
     console.log(Randomnum)
     let out = document.getElementById('gameover');
     if (Randomnum === num){
@@ -40,12 +41,7 @@ function handleClick(numToAdd) {
     }
 
 
-    
-    Click();
-    
 
-  }
-}
 
 
 
