@@ -77,6 +77,9 @@ function handleClick(numToAdd) {
         won.style.display = "none";
       }, 3000);
       newmtch.style.display = "block"
+      newmtch.onclick = function NewClick(){
+      window.location.reload()
+      }
     }
 
     }
