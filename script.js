@@ -8,6 +8,7 @@ let won = document.getElementById('won')
 let fnum = document.getElementById('fade-num')
 let btn = document.getElementById('btn')
 let fnum2 = document.getElementById('fade-num2')
+let newmtch = document.getElementById('newmtch')
 let data;
 
 
@@ -60,7 +61,12 @@ function handleClick(numToAdd) {
       defeat.textContent = 'OPPONENT WINS';
       setTimeout(() => {
         defeat.style.display = "none";
+        fnum2.style.display = "none"
       }, 3000);
+      newmtch.style.display = "block"
+      newmtch.onclick = function NewClick(){
+      window.location.reload()
+      }
     }else if(num === randomnum && Rscore < data){
       fnum2.textContent = 'OPPONENT TAKES - ' + randomnum + 'YOU TAKES - ' + num
       fnum2.style.color = "green"
@@ -70,6 +76,7 @@ function handleClick(numToAdd) {
         fnum2.style.display = "none"
         won.style.display = "none";
       }, 3000);
+      newmtch.style.display = "block"
     }
 
     }
